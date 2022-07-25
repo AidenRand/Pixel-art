@@ -18,8 +18,8 @@ body {
 
 .navbar,
 .container {
-  background-color: rgb(0, 0, 0);
-  width: 800px;
+background-color: white;
+  width: 700px;
 }
 
 .nav-bar {
@@ -32,7 +32,7 @@ body {
   align-items: center;
 }
 
-.btn,
+.reset,
 input {
   height: 35px;
   padding: 0 10px;
@@ -46,11 +46,9 @@ input {
 .container {
     --size: 4;
     display: grid;
-    height: 800px;
+    height: 700px;
     grid-template-columns: repeat(var(--size), 1fr);
     grid-template-rows: repeat(var(--size), 1r);
-    gap: 1px;
-    padding: 3px;
   }
   
 .pixel {
