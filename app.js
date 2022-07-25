@@ -5,8 +5,9 @@ const resetBtn = document.querySelector(".reset");
 let size = sizeElement.value;
 let draw = false;
 
+
 function drawCanvas(size) {
-    // Set size of grid
+  // Set size of grid
   container.style.setProperty("--size", size);
   //Create number of pixels in grid
   for (let i = 0; i < size * size; i++) {
@@ -14,12 +15,12 @@ function drawCanvas(size) {
     div.classList.add("pixel");
 
     // Change color of grid
-    div.addEventListener("mouseover", function () {
+    div.addEventListener("mouseover", () => {
       if (!draw) return;
       div.style.backgroundColor = color.value;
     });
 
-    div.addEventListener("mousedown", function () {
+    div.addEventListener("mousedown", () => {
       div.style.backgroundColor = color.value;
     });
 
@@ -28,10 +29,10 @@ function drawCanvas(size) {
 }
 
 // Keep drawing only while mouse is pressed down
-window.addEventListener("mousedown", function () {
+window.addEventListener("mousedown", () => {
   draw = true;
 });
-window.addEventListener("mouseup", function () {
+window.addEventListener("mouseup", () => {
   draw = false;
 });
 
@@ -44,7 +45,7 @@ function reset() {
 resetBtn.addEventListener("click", reset);
 
 // Change grid size
-sizeElement.addEventListener("keyup", function () {
+sizeElement.addEventListener("keyup", () => {
   size = sizeElement.value;
   reset();
 });
